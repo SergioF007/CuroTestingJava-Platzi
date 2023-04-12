@@ -9,8 +9,7 @@ public class StringUtilTest {
     //tavulador de main: psvm
     public static void main(String[] args) {
 
-        String result = StringUtil.repeat("Hola", 3);
-        assertEquals(result,"HolaHolaHola");
+        assertEquals(StringUtil.repeat("Hola", 3),"HolaHolaHola");
 
     }
 
