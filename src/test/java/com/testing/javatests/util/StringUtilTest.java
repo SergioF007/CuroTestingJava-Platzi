@@ -6,18 +6,22 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.omg.SendingContext.RunTime;
 
-
 public class StringUtilTest {
-
     //tavulador de main: psvm
-
     @Test
-    public void testRepeat() {
+    public void repeat_string_one() {
 
-        Assert.assertEquals("HolaHolaHola" , StringUtil.repeat("Hola", 3));
-        Assert.assertEquals("Hola" , StringUtil.repeat("Hola2", 1));
+        Assert.assertEquals("Hola" , StringUtil.repeat("Hola", 1));
 
     }
+    @Test
+    public void repeat_string_multiple_times() {
+        Assert.assertEquals("HolaHolaHola" , StringUtil.repeat("Hola", 3));
 
+    }
+    @Test
+    public void repeat_string_zero_times() {
+        Assert.assertEquals("" , StringUtil.repeat("Hola", 0));
 
+    }
 }
