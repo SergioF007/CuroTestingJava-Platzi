@@ -24,4 +24,11 @@ public class StringUtilTest {
         Assert.assertEquals("" , StringUtil.repeat("Hola", 0));
 
     }
+
+    // Vamos a crear un Test para validar que el argumento es correcto
+    @Test(expected = IllegalArgumentException.class)
+    public void repeat_string_negative_times() {
+
+        StringUtil.repeat("Hola", -1);
+    }
 }
