@@ -9,6 +9,14 @@ public class PaymentProcessor {
     }
 
     public boolean makePayment(double amount) {
-        return false;
+
+        // para generar una respues se tiene que ejecutar primero el metodo PaymentReques que es el encargado de capturar el valor
+        PaymentResponse response = paymentGateway.requestPayment(new PaymentRequest(amount));
+
+        if (response.getStatus() == PaymentResponse.PaymentStatus.OK) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
